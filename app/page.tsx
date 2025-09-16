@@ -374,7 +374,7 @@ export default function Home() {
                   try{
                     const res = await fetch("/api/send-email", {
                       method: "POST",
-                      headers: { "Contenet-Type": "application/json"},
+                      headers: { "Content-Type": "application/json"},
                       body: JSON.stringify({name, email, message}),
                     });
 
