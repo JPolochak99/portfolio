@@ -59,7 +59,7 @@ export default function Home() {
             <a href="#aboutMe">About Me</a>
             <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
-            <a href="#hobbies">Hobbies</a>
+            <a href="#hobbies">Graphics</a>
           </div>
           <div className={styles.contact}>
             <button className={styles.contactMeButton} onClick={() =>setIsContactOpen(true)}>Contact Me</button>
@@ -323,7 +323,7 @@ export default function Home() {
 
       <hr className={styles.hr}></hr>
       <section className={styles.hobbiesSection} id="hobbies">
-        <h1>Hobbies</h1>
+        <h1>Graphics</h1>
         <div className={styles.hobbiePicDome}>
           <div style={{ width: '100%', height: '100%' }}>
             <DomeGallery />
