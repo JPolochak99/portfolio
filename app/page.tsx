@@ -12,7 +12,7 @@ import 'aos/dist/aos.css';
 
 // 4️⃣ Other libraries
 import AOS from 'aos';
-import { faInstagram, faCss3Alt, faSquareLinkedin, faHtml5, faSquareJs, faPhp, faPython, faGitAlt, faGithub, faLinux, faWindows, faReact } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faCss3Alt, faSquareLinkedin, faHtml5, faSquareJs, faPhp, faPython, faGithub, faLinux, faReact } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 import { faFileExcel, faFilePowerpoint } from '@fortawesome/free-regular-svg-icons';
 

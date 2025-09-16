@@ -89,8 +89,12 @@ import React, {
         filterEl.setAttribute("height", "500%");
       }
   
+      interface AnimElement {
+        beginElement?: () => void; // optional in case some don't have it
+      }
+
       requestAnimationFrame(() => {
-        [...dyAnims, ...dxAnims].forEach((a: any) => {
+        ([...dyAnims, ...dxAnims] as AnimElement[]).forEach((a) => {
           if (typeof a.beginElement === "function") {
             try {
               a.beginElement();
@@ -112,10 +116,11 @@ import React, {
       return () => ro.disconnect();
     }, []);
   
-    const vars: CSSProperties = {
-      ["--electric-border-color" as any]: color,
-      ["--eb-border-width" as any]: `${thickness}px`,
+    const vars: { [key: string]: string } = {
+      '--electric-border-color': color,
+      '--eb-border-width': `${thickness}px`,
     };
+    
   
     return (
       <div
