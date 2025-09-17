@@ -317,7 +317,7 @@ html,body {
 /* ------------------------------------- About Me ----------------------------- */
 .aboutMeContainer{
   background:linear-gradient(135deg, #008080, #00cfcf) ;
-  margin: 50px 30px 75px 30px;
+  margin: 50px 30px 100px 30px;
   padding:100px 50px;
   border-radius: 25px;
   height: 500px;
@@ -408,6 +408,12 @@ html,body {
 }
 
 
+.hobbiePicDome{
+  width: 590px;
+  height: 100%;
+  border-radius: 10px;
+}
+
 /* ------------------------------------- Skills Section----------------------------- */
 .hr{
   border: none;
@@ -494,25 +500,8 @@ html,body {
 }
 
 /* ------------------------------------------- Hobbies ------------------------------------------------------ */
-.hobbiesSection{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding-bottom:200px;
-}
 
-.hobbiesSection h1{
-  font-size: 3rem;
-  padding-bottom: 25px;
-}
 
-.hobbiePicDome{
-  width: 600px;
-  height: 70vh;
-  border: 5px teal solid;
-  border-radius: 10px;
-}
 
 
 @media (prefers-color-scheme: dark) {

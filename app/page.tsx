@@ -1,16 +1,16 @@
 "use client";
 
-// 1️⃣ FontAwesome library setup must come first
+// 1️ FontAwesome library setup must come first
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-// 2️⃣ React
+// 2️ React
 import React, { useState, useEffect } from "react";
 
-// 3️⃣ CSS
+// 3️ CSS
 import styles from "./page.module.css";
 import 'aos/dist/aos.css';
 
-// 4️⃣ Other libraries
+// 4️ Other libraries
 import AOS from 'aos';
 import { faInstagram, faCss3Alt, faSquareLinkedin, faHtml5, faSquareJs, faPhp, faPython, faGithub, faLinux, faReact } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
@@ -47,9 +47,8 @@ export default function Home() {
   const [isContactOpen, setIsContactOpen] = useState(false);
   return (
     <div className={styles.page} id="home">
-  
       <main className={styles.main}>
-
+         {/* ------------------------------------------------------------ Nav Section ------------------------------------------------------------ */}
         <div className={styles.nav}>
           <div className={styles.logo}>
             <h1>Jonathan Polochak</h1>
@@ -57,9 +56,8 @@ export default function Home() {
           <div className={styles.links}>
             <a href="#home">Home</a>
             <a href="#aboutMe">About Me</a>
-            <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
-            <a href="#hobbies">Graphics</a>
+            <a href="#projects">Projects</a>
           </div>
           <div className={styles.contact}>
             <button className={styles.contactMeButton} onClick={() =>setIsContactOpen(true)}>Contact Me</button>
@@ -67,7 +65,7 @@ export default function Home() {
         </div>
 
         
-          
+         {/* ------------------------------------------------------------ Center Circle & Picture Section ------------------------------------------------------------ */}  
         <div data-aos="zoom-in" data-aos-duration="1000">
         <div className={styles.circleWrapper}>
           <div className={styles.circle}></div>
@@ -77,7 +75,7 @@ export default function Home() {
         </div>
         </div>
 
-          
+           {/* ------------------------------------------------------------ Text Next to Center Circle Section ------------------------------------------------------------ */}
           <div className={styles.myText}>
           <div data-aos="fade-left" data-aos-duration="2000">
             <div className={styles.greetingWrapper}>
@@ -106,6 +104,7 @@ export default function Home() {
                
         <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
 
+         {/* ------------------------------------------------------------ About Me Section ------------------------------------------------------------ */}
         <section id="aboutMe">
           <div className={styles.aboutMeContainer}>
             <div className={styles.aboutMeText}> 
@@ -122,59 +121,10 @@ export default function Home() {
 
         </section>
 
-
-
-
-
-        <section id="projects" >
-          <div className={styles.cardContainer}>
-            <div className={styles.projectCard}>
-                <h1>Box Battles</h1>
-
-                <Carousel
-                  images={[
-                    "/assets/boxBattleHome.png",
-                    "/assets/boxBattleDashboard.png",
-                    "/assets/boxBattleCreateGame.png"
-                  ]}
-                />
-                
-                <div className={styles.about}>
-                  <h1>About</h1>
-                  <p>Box Battles is a full-stack web application that allows users to create and participate in Super Bowl styled games for both the NFL and NBA. The platform features a real-time game management system, including dynamic team selection, automated score tracking, and live box score updates via the SportsData.io API for NFL games. Users can join or create a game, receive notifications via SMS integration and in-app notifications, and interact with a clean and responsive UI.</p>
-                </div>
-
-                <div className={styles.used}>
-                  <h1>Skills Used</h1>
-                  <ul>
-                    <li>HTML & CSS</li>
-                    <li>PHP</li>
-                    <li>JavaScript</li>
-                    <li>API Intergration</li>
-                    <li>Authentication & Sessions</li>
-                    <li>Database Design</li>
-                    <li>SQL</li>
-                  </ul>
-                </div>
-            </div>
-
-            <div className={styles.projectCard}>
-                <h3>Box Battles</h3>
-
-                <Carousel
-                  images={[
-                    "/assets/boxBattleHome.png",
-                    "/assets/boxBattleDashboard.png",
-                    "/assets/boxBattleCreateGame.png"
-                  ]}
-                />
-            </div>
-          </div>
-        </section>
+         {/* ------------------------------------------------------------ Skill Section ------------------------------------------------------------ */}
+        <div data-aos="fade-in" data-aos-duration="1000">
 
         <section className={styles.skills} id="skills">
-          <hr className={styles.hr}></hr>
-          
           <div className={styles.skillsTitle}>
             <p>Technical</p>
             
@@ -186,8 +136,8 @@ export default function Home() {
               cursorCharacter="|"
             />
           </div>  
-          <div className={styles.skillGrid}>
 
+          <div className={styles.skillGrid}>
             <div className={styles.gridElements}>
               <div className={styles.iconTextCombo}>
                 <FontAwesomeIcon icon={faHtml5} className={styles.skillIcon} />
@@ -268,8 +218,6 @@ export default function Home() {
                 </div>
             </div>
 
-              
-
               <div className={styles.gridElements}>
                 <div className={styles.iconTextCombo}>
                   <FontAwesomeIcon icon={faReact} className={styles.skillIcon} />
@@ -280,12 +228,6 @@ export default function Home() {
                 </div>
               </div>
 
-              
-
-              
-
-              
-              
               <div className={styles.gridElements}>
                 <div className={styles.iconTextCombo}>
                   <FontAwesomeIcon icon={faFileExcel} className={styles.skillIcon}/>
@@ -295,8 +237,6 @@ export default function Home() {
                   <p>Advanced</p>
                 </div>
               </div>
-
-              
 
               <div className={styles.gridElements}>
                 <div className={styles.iconTextCombo}>
@@ -317,19 +257,74 @@ export default function Home() {
                 </div>
               </div>
           </div>
-
+              
+        <hr className={styles.hr}></hr>
         </section>
+    </div>
+
+
+        {/* ------------------------------------------------------------ Project Section ------------------------------------------------------------ */}
+        <section id="projects" >
+          <div className={styles.cardContainer}>
+            <div className={styles.projectCard}>
+                <h1>Box Battles</h1>
+
+                <Carousel
+                  images={[
+                    "/assets/boxBattleHome.png",
+                    "/assets/boxBattleDashboard.png",
+                    "/assets/boxBattleCreateGame.png"
+                  ]}
+                />
+                
+                <div className={styles.about}>
+                  <h1>About</h1>
+                  <p>Box Battles is a full-stack web application that allows users to create and participate in Super Bowl styled games for both the NFL and NBA. The platform features a real-time game management system, including dynamic team selection, automated score tracking, and live box score updates via the SportsData.io API for NFL games. Users can join or create a game, receive notifications via SMS integration and in-app notifications, and interact with a clean and responsive UI.</p>
+                </div>
+
+                <div className={styles.used}>
+                  <h1>Skills Used</h1>
+                  <ul>
+                    <li>HTML & CSS</li>
+                    <li>PHP</li>
+                    <li>JavaScript</li>
+                    <li>API Intergration</li>
+                    <li>Authentication & Sessions</li>
+                    <li>Database Design</li>
+                    <li>SQL</li>
+                  </ul>
+                </div>
+            </div>
+
+            <div className={styles.projectCard}>
+                <h1>Graphics</h1>
+                  <div className={styles.hobbiePicDome}>
+                    <div style={{ width: '100%', height: '100%' }}>
+                      <DomeGallery />
+                    </div>
+                  </div>
+            </div>
+
+            <div className={styles.projectCard}>
+                <h3>Box Battles</h3>
+
+                <Carousel
+                  images={[
+                    "/assets/boxBattleHome.png",
+                    "/assets/boxBattleDashboard.png",
+                    "/assets/boxBattleCreateGame.png"
+                  ]}
+                />
+            </div>
+
+          </div>
+        </section>
+
+        
 
 
       <hr className={styles.hr}></hr>
-      <section className={styles.hobbiesSection} id="hobbies">
-        <h1>Graphics</h1>
-        <div className={styles.hobbiePicDome}>
-          <div style={{ width: '100%', height: '100%' }}>
-            <DomeGallery />
-            </div>
-        </div>
-      </section>
+      
 
 
       <footer>

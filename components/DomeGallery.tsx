@@ -146,7 +146,7 @@ export default function DomeGallery({
   minRadius = 600,
   maxRadius = Infinity,
   padFactor = 0.25,
-  overlayBlurColor = 'teal',
+  overlayBlurColor = 'transparent',
   maxVerticalRotationDeg = DEFAULTS.maxVerticalRotationDeg,
   dragSensitivity = DEFAULTS.dragSensitivity,
   enlargeTransitionMs = DEFAULTS.enlargeTransitionMs,
@@ -204,6 +204,23 @@ export default function DomeGallery({
       el.style.transform = `translateZ(calc(var(--radius) * -1)) rotateX(${xDeg}deg) rotateY(${yDeg}deg)`;
     }
   };
+
+  useEffect(() => {
+    let frameId: number;
+    const speed = 0.05; // degrees per frame (~0.1 = slow, ~0.5 = faster)
+  
+    const animate = () => {
+      // slowly rotate around Y axis
+      rotationRef.current.y = wrapAngleSigned(rotationRef.current.y + speed);
+      applyTransform(rotationRef.current.x, rotationRef.current.y);
+  
+      frameId = requestAnimationFrame(animate);
+    };
+  
+    frameId = requestAnimationFrame(animate);
+  
+    return () => cancelAnimationFrame(frameId);
+  }, [applyTransform]);
 
   const lockedRadiusRef = useRef<number | null>(null);
 
