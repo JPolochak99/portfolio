@@ -211,6 +211,12 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
   curve.curveType = "chordal";
   texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
 
+  const fixedOffset: [number, number, number] = [4, 0, 0]; // right/up offset
+
+useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], 1]); // stays the same
+useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], 1]);
+useRopeJoint(j2, j3, [[0, 0, 0], [0, 0, 0], 1]);
+
   return (
     <>
       <group position={[0, 4, 0]}>
@@ -218,6 +224,8 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
           ref={fixed}
           {...segmentProps}
           type={"fixed" as RigidBodyProps["type"]}
+          position={fixedOffset}
+          
         />
         <RigidBody
           position={[0.5, 0, 0]}

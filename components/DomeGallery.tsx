@@ -35,11 +35,15 @@ type ItemDef = {
 
 const DEFAULT_IMAGES: ImageItem[] = [
   {
-    src: '/assets/hobbies/roller1.jpg',
+    src: '/assets/hobbies/eletric.png',
+    alt: 'somehign art'
+  },
+  {
+    src: '/assets/hobbies/gameDayFB.png',
     alt: 'Abstract art'
   },
   {
-    src: '/assets/hobbies/roller2.jpg',
+    src: '/assets/hobbies/cam.png',
     alt: 'Modern sculpture'
   },
   {
@@ -47,7 +51,7 @@ const DEFAULT_IMAGES: ImageItem[] = [
     alt: 'Digital artwork'
   },
   {
-    src: '/assets/hobbies/jayln edit.png',
+    src: '/assets/hobbies/jaylnStats.png',
     alt: 'Contemporary art'
   },
   {
@@ -55,11 +59,11 @@ const DEFAULT_IMAGES: ImageItem[] = [
     alt: 'Geometric pattern'
   },
   {
-    src: '/assets/hobbies/bailee edit new glass.png',
+    src: '/assets/hobbies/bailee.png',
     alt: 'Textured surface'
   },
   {
-    src: '/assets/hobbies/blond poster.png',
+    src: 'https://pbs.twimg.com/media/Gyla7NnXMAAXSo_?format=jpg&name=large',
     alt: 'Social media image'
   }
 ];
