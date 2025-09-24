@@ -368,7 +368,7 @@ export default function Home() {
 
                   <div className={styles.footerEmail}>
                     <FontAwesomeIcon icon={faEnvelope} />
-                    <p>polochakjonathan@gmail.com</p>
+                    <p>polochak</p>
                   </div>
 
                   <div className={styles.footerPhone}>
