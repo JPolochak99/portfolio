@@ -8,6 +8,7 @@ import React, { useState, useEffect } from "react";
 
 // 3️ CSS
 import styles from "./page.module.css";
+
 import 'aos/dist/aos.css';
 
 // 4️ Other libraries
@@ -23,12 +24,19 @@ import Carousel from "../components/carousel";
 import ElectricBorder from '../components/ElectricBorder';
 import DomeGallery from '../components/DomeGallery';
 
-
-
-
+import Preloader from './preloader';
 
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
+  const [isContactOpen, setIsContactOpen] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+
+
   useEffect(() => {
     
     AOS.init({
@@ -44,14 +52,16 @@ export default function Home() {
     return() => window.removeEventListener('load', handleLoad);
   }, []);
 
-  const [isContactOpen, setIsContactOpen] = useState(false);
+  if (loading) return <Preloader />;
+
+  
   return (
     <div className={styles.page} id="home">
       <main className={styles.main}>
          {/* ------------------------------------------------------------ Nav Section ------------------------------------------------------------ */}
-        <div className={styles.nav}>
+        <div className={styles.nav} data-aos="fade-right" data-aos-duration="2000">
           <div className={styles.logo}>
-            <h1>Jonathan Polochak</h1>
+            <img src="/assets/JpLogo.png"></img>
           </div>
           <div className={styles.links}>
             <a href="#home">Home</a>
@@ -68,7 +78,7 @@ export default function Home() {
           <div className={styles.leftSection}>
            {/* ------------------------------------------------------------ Text Next to Center Circle Section ------------------------------------------------------------ */}
             <div className={styles.myText}>
-            <div data-aos="fade-left" data-aos-duration="2000">
+            <div data-aos="fade-right" data-aos-duration="2000" data-aos-delay="2000">
               <div className={styles.greetingWrapper}>
                 <p><span className={styles.greeting}> Hello, my name is</span></p> <span className={styles.line}></span>
               </div>
@@ -95,16 +105,15 @@ export default function Home() {
 
 
           {/* ------------------------------------------------------------ Center Circle & Picture Section ------------------------------------------------------------ */}  
-        <div className={styles.middleSection} data-aos="zoom-in" data-aos-duration="1000">
-        <div className={styles.circleWrapper}>
-          <div className={styles.circle}></div>
-          <div className={styles.myImg} >
-            <img src="/assets/newSuit.png" alt="Me" />
-          </div>
+        <div className={styles.middleSection} data-aos="zoom-in" data-aos-duration="2000"  data-aos-delay="2000">
+        <div className={styles.mainPictureWrapper}>
+          
+          
+          <img src="/assets/blackTieCircle.png" alt="Me" />
         </div>
         
         </div>
-        <div className={styles.rightSection}>
+        <div className={styles.rightSection} >
           
           <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
         </div>
@@ -114,14 +123,14 @@ export default function Home() {
 
          {/* ------------------------------------------------------------ About Me Section ------------------------------------------------------------ */}
         <section id="aboutMe">
-          <div className={styles.aboutMeContainer}>
+          <div className={styles.aboutMeContainer} >
             <div className={styles.aboutMeText}> 
               <h1>About Me</h1>
-              <p>My name is Jonathan Polochak, I am studying computer science at the University of Coastal Carolina. My short term goal is to find an intership in my field. My long term goal is to become a front end developer. I enjoy combining creativity with problem-solving, and front-end development allows me to bring ideas to life visually while also focusing on user experience. In my free time, I work on personal projects such as building responsive websites and designing digital graphics to sharpen my skills. I am currently volunteering as a graphic designer for the Coastal Carolina womens basketball team. I am excited to continue learning and building real-world projects that will prepare me for a career in front-end development.</p>
+              <p>My name is Jonathan Polochak, I am studying computer science at the University of Coastal Carolina. My short term goal is to find a summer 2026 intership in computer science. My long term goal is to become a front end developer. I enjoy combining creativity with problem-solving, and front-end development allows me to bring ideas to life visually while also focusing on user experience. In my free time, I work on personal projects such as building responsive websites and designing digital graphics to sharpen my skills. I am currently volunteering as a graphic designer for the Coastal Carolina womens basketball team. I am excited to continue learning and building real-world projects that will prepare me for my future career.</p>
             </div>
             <div className={styles.aboutMePictureContainer}>
               <div className={styles.aboutMePicture}>
-                <img src="../../assets/me.png" data-aos="zoom-in"></img>
+                <img src="../../assets/blueTie.png" data-aos="zoom-in"></img>
                 </div>
             </div>
           </div>
@@ -273,7 +282,7 @@ export default function Home() {
     <hr className={styles.hr}></hr>
 
         {/* ------------------------------------------------------------ Project Section ------------------------------------------------------------ */}
-        <section id="projects" >
+        <section id="projects">
           <div className={styles.cardContainer}>
             <div className={styles.projectCard}>
                 <h1>Box Battles</h1>
