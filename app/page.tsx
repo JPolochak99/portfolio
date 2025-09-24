@@ -65,7 +65,7 @@ export default function Home() {
         </div>
 
         <div className={styles.landingArea}>
-          <div className={styles.contentWrapper}>
+          <div className={styles.leftSection}>
            {/* ------------------------------------------------------------ Text Next to Center Circle Section ------------------------------------------------------------ */}
             <div className={styles.myText}>
             <div data-aos="fade-left" data-aos-duration="2000">
@@ -95,17 +95,22 @@ export default function Home() {
 
 
           {/* ------------------------------------------------------------ Center Circle & Picture Section ------------------------------------------------------------ */}  
-        <div data-aos="zoom-in" data-aos-duration="1000">
+        <div className={styles.middleSection} data-aos="zoom-in" data-aos-duration="1000">
         <div className={styles.circleWrapper}>
           <div className={styles.circle}></div>
           <div className={styles.myImg} >
             <img src="/assets/newSuit.png" alt="Me" />
           </div>
         </div>
+        
+        </div>
+        <div className={styles.rightSection}>
+          
+          <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
         </div>
         </div>
                
-        <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
+        
 
          {/* ------------------------------------------------------------ About Me Section ------------------------------------------------------------ */}
         <section id="aboutMe">
@@ -114,9 +119,10 @@ export default function Home() {
               <h1>About Me</h1>
               <p>My name is Jonathan Polochak, I am studying computer science at the University of Coastal Carolina. My short term goal is to find an intership in my field. My long term goal is to become a front end developer. I enjoy combining creativity with problem-solving, and front-end development allows me to bring ideas to life visually while also focusing on user experience. In my free time, I work on personal projects such as building responsive websites and designing digital graphics to sharpen my skills. I am currently volunteering as a graphic designer for the Coastal Carolina womens basketball team. I am excited to continue learning and building real-world projects that will prepare me for a career in front-end development.</p>
             </div>
-            <div className={styles.aboutMePicture}>
-              
+            <div className={styles.aboutMePictureContainer}>
+              <div className={styles.aboutMePicture}>
                 <img src="../../assets/me.png" data-aos="zoom-in"></img>
+                </div>
             </div>
           </div>
 
@@ -125,9 +131,9 @@ export default function Home() {
         </section>
 
          {/* ------------------------------------------------------------ Skill Section ------------------------------------------------------------ */}
-        <div data-aos="fade-in" data-aos-duration="1000">
+        <div className={styles.skills} data-aos="fade-in" data-aos-duration="1000">
 
-        <section className={styles.skills} id="skills">
+        <section  id="skills">
           <div className={styles.skillsTitle}>
             <p>Technical</p>
             
@@ -260,11 +266,11 @@ export default function Home() {
                 </div>
               </div>
           </div>
-              
-        <hr className={styles.hr}></hr>
+               
+        
         </section>
     </div>
-
+    <hr className={styles.hr}></hr>
 
         {/* ------------------------------------------------------------ Project Section ------------------------------------------------------------ */}
         <section id="projects" >

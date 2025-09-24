@@ -211,7 +211,7 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
   curve.curveType = "chordal";
   texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
 
-  const fixedOffset: [number, number, number] = [4, 0, 0]; // right/up offset
+  const fixedOffset: [number, number, number] = [0, .5, 0]; // right/up offset
 
 useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], 1]); // stays the same
 useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], 1]);

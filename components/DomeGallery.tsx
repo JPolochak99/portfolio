@@ -63,7 +63,7 @@ const DEFAULT_IMAGES: ImageItem[] = [
     alt: 'Textured surface'
   },
   {
-    src: 'https://pbs.twimg.com/media/Gyla7NnXMAAXSo_?format=jpg&name=large',
+    src: '/assets/hobbies/blondPoster.png',
     alt: 'Social media image'
   }
 ];
