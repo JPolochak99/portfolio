@@ -126,7 +126,7 @@ export default function Home() {
           <div className={styles.aboutMeContainer} >
             <div className={styles.aboutMeText}> 
               <h1>About Me</h1>
-              <p>My name is Jonathan Polochak, I am studying computer science at the University of Coastal Carolina. My short term goal is to find a summer 2026 intership in computer science. My long term goal is to become a front end developer. I enjoy combining creativity with problem-solving, and front-end development allows me to bring ideas to life visually while also focusing on user experience. In my free time, I work on personal projects such as building responsive websites and designing digital graphics to sharpen my skills. I am currently volunteering as a graphic designer for the Coastal Carolina womens basketball team. I am excited to continue learning and building real-world projects that will prepare me for my future career.</p>
+              <p>My name is Jonathan Polochak, I am studying computer science at the University of Coastal Carolina. My short term goal is to find a summer 2026 intership in computer science. My long term goal is to become a front end developer. I enjoy combining creativity with problem-solving, and front-end development allows me to bring ideas to life visually while also focusing on user experience. In my free time, I work on personal projects such as building responsive websites and designing digital graphics to sharpen my skills. I am excited to continue learning and building real-world projects that will prepare me for my future career.</p>
             </div>
             <div className={styles.aboutMePictureContainer}>
               <div className={styles.aboutMePicture}>
