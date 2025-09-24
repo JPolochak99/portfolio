@@ -64,8 +64,37 @@ export default function Home() {
           </div>
         </div>
 
-        
-         {/* ------------------------------------------------------------ Center Circle & Picture Section ------------------------------------------------------------ */}  
+        <div className={styles.landingArea}>
+          <div className={styles.contentWrapper}>
+           {/* ------------------------------------------------------------ Text Next to Center Circle Section ------------------------------------------------------------ */}
+            <div className={styles.myText}>
+            <div data-aos="fade-left" data-aos-duration="2000">
+              <div className={styles.greetingWrapper}>
+                <p><span className={styles.greeting}> Hello, my name is</span></p> <span className={styles.line}></span>
+              </div>
+
+              <h1>Jonathan Polochak</h1>
+              <p>Majoring in <span className={styles.teal}>Information Technology</span></p>
+              <TextType 
+                text={["I am a student at Coastal Carolina", "I am in my junior year"]}
+                typingSpeed={75}
+                pauseDuration={2500}
+                showCursor={true}
+                cursorCharacter="|"
+              />
+              <div className={styles.socials}>
+                <p>My Socials</p>
+                <div className={styles.icons}>
+                  <FontAwesomeIcon icon={faInstagram} />
+                  <FontAwesomeIcon icon={faSquareLinkedin} />
+                </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+
+
+          {/* ------------------------------------------------------------ Center Circle & Picture Section ------------------------------------------------------------ */}  
         <div data-aos="zoom-in" data-aos-duration="1000">
         <div className={styles.circleWrapper}>
           <div className={styles.circle}></div>
@@ -74,33 +103,7 @@ export default function Home() {
           </div>
         </div>
         </div>
-
-           {/* ------------------------------------------------------------ Text Next to Center Circle Section ------------------------------------------------------------ */}
-          <div className={styles.myText}>
-          <div data-aos="fade-left" data-aos-duration="2000">
-            <div className={styles.greetingWrapper}>
-              <p><span className={styles.greeting}> Hello, my name is</span></p> <span className={styles.line}></span>
-            </div>
-
-            <h1>Jonathan Polochak</h1>
-            <p>Majoring in <span className={styles.teal}>Information Technology</span></p>
-            <TextType 
-              text={["I am a student at Coastal Carolina", "I am in my junior year"]}
-              typingSpeed={75}
-              pauseDuration={2500}
-              showCursor={true}
-              cursorCharacter="|"
-            />
-            <div className={styles.socials}>
-              <p>My Socials</p>
-              <div className={styles.icons}>
-                <FontAwesomeIcon icon={faInstagram} />
-                <FontAwesomeIcon icon={faSquareLinkedin} />
-              </div>
-            </div> 
-          </div>
-          </div>
-
+        </div>
                
         <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
 

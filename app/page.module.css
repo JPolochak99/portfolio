@@ -214,15 +214,33 @@ html,body {
 .submitBtn:hover{
   transform: scale(1.1);
 }
+
+
+
+.landingArea {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* center content horizontally */
+  align-items: center;     /* center content vertically */
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: row;     /* image and text side by side */
+  align-items: center;
+  gap: 5vw;                /* space between image and text relative to viewport */
+  max-width: 90vw;         /* prevent overflow */
+}
+
 /* ------------------------------------- Circle Pic  ----------------------------- */
 .circleWrapper {
-  margin-top: 75px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 850px;
-  width: 100%;
+  width: 500px;
 }
 
 .circle {
@@ -233,6 +251,7 @@ html,body {
   border-radius: 50%;
   background-color: teal;
   z-index: 1;
+  
 }
 
 .myImg {
@@ -253,12 +272,13 @@ html,body {
 }
 
 /* ------------------------------------- text next to circle pic ----------------------------- */
-.myText{
+.myText {
   position: absolute;
-  top:40%;
-  left:5%;
-  text-align: left;
+  right: calc(50% + 300px); /* push to the right of center + image width/2 */
+  top: 55%;
+  transform: translateY(-50%);
   color: white;
+  width: 600px; /* adjust as needed */
 }
 
 .greetingWrapper{
@@ -269,32 +289,33 @@ html,body {
 
 .greeting{
   background-color: #444444;
-  width: fit-content;
-  padding: 5px;
+  padding: 0.3rem 0.5rem;
   border-radius: 5px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 
 .line{
-  margin-top: 5px;
   background-color:#b1784f;
-  width: 300px;
-  height: 10px;
+  height: 0.6rem;
   border-radius: 5px;
+  flex-grow: 1;
 }
 
 .myText h1{
-  font-size: 4rem;
+  font-size: clamp(2rem, 4vw, 4rem); /* responsive font size */
+  margin: 0;
 }
 
 .myText p{
-  font-size: 2rem;
+  font-size: clamp(1rem, 2vw, 2rem);
+  margin: 0.5rem 0;
 }
 
 .socials{
   color:white;
-  font-size: 3rem
+  font-size: 2rem;
+  margin-top: 1rem;
 }
 
 .socials p{
@@ -308,9 +329,8 @@ html,body {
 
 .icons{
   display: flex;
-  width:100px;
-  gap: 10px;
-  margin-top: 15px;
+  gap: 1rem;
+  margin-top: 0.5rem;
 }
 
 
