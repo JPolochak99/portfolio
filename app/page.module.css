@@ -57,6 +57,31 @@ html,body {
   gap: 20px;
   font-size: 20px;
   justify-self: center;
+  
+}
+
+.links a{
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  color:inherit;
+}
+
+.links a::after{
+  content:"";
+  position: absolute;
+  left:0;
+  bottom:-2px;
+  width: 0%;
+  height: 2px;
+  background: #00cfcf;
+  transition: width 0.3s ease-in-out;
+}
+
+.links a:hover{
+  color:#00cfcf;
+}
+.links a:hover::after{
+  width: 100%;
 }
 
 .contact{
@@ -65,16 +90,408 @@ html,body {
 }
 
 .contact:hover{
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .contactMeButton{
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(0, 247, 255, 0.671);
   padding: 10px;
   border-radius: 25px;
   border: none;
   font-size: 1.3rem;
 }
+
+
+
+/* ----------------------------------- Landing Area --------------------------------------- */
+.landingArea {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  margin-top: 2vh;
+}
+
+.leftSection,
+.middleSection,
+.rightSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* ------------------------------------- text next to circle pic ----------------------------- */
+.leftSection {
+  justify-content: flex-end;
+  
+}
+
+.myText {
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.greetingWrapper{
+  display: flex;
+  align-items: center;
+  gap:2vw;
+}
+
+.greeting{
+  background-color: #444444;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+
+.line{
+  background-color:#b1784f;
+  height: 0.6rem;
+  border-radius: 5px;
+  flex-grow: .8;
+}
+
+.myText h1{
+  font-size: 3vw; 
+  margin: 0;
+}
+
+.myText p{
+  font-size: 1.5vw;
+  margin: 0.5rem 0;
+}
+
+.socials{
+  color:white;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.socials p{
+  background-color: #444444;
+  width: fit-content;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  margin-top: 20px;
+}
+
+.icons{
+  display: flex;
+  gap: .25rem;
+  margin-top: 0.5rem;
+}
+
+.icons svg {
+  width: 2.5vw;   /* adjust width */
+  height: 2.5vw;  /* adjust height */
+  color: #ffffff; /* optional: change color */
+  transition: all 0.3s ease-in-out;
+}
+
+.icons svg:hover{
+  transform: scale(1.1);
+  color:#00a8a8;
+}
+
+
+
+/* ------------------------------------- Circle Pic  ----------------------------- */
+.middleSection{
+  position: relative;
+}
+
+.mainPictureWrapper img{
+  width: 65vh;
+}
+
+
+/* ------------------------------------- Lanyard Section ----------------------------- */
+
+
+
+/* ------------------------------------- About Me ----------------------------- */
+.aboutMeContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background:linear-gradient(135deg, #008080, #00cfcf) ;
+  
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 25px;
+  height: 50vh;
+  
+  border: white solid 3px;
+  color: white;
+}
+
+.aboutMeText{
+  flex: 2;
+  color:white;
+  font-size:1.2vw;
+  line-height: 1.6; 
+  
+}
+
+.aboutMePictureContainer{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  aspect-ratio: 1/1;
+  max-width: 600px;
+  width: 100%;
+
+  background:linear-gradient(135deg, #008080, #00cfcf) ;
+  border: white solid .5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  
+}
+
+
+
+.aboutMeText p{
+  font-family:'Courier New', Courier, monospace;
+}
+
+
+
+.aboutMePicture img{
+  width: 100%;     
+  height: auto;
+  object-fit: cover;
+  
+  
+}
+
+
+/* ------------------------------------- Skills Section----------------------------- */
+
+.skills{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 10rem;
+  text-align: center;
+}
+
+.skillsTitle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:1vw;
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.skillsTitle span {
+  font-size: 3rem;
+}
+
+
+.skillGrid{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;             /* uniform space between items */
+  width: 80%;
+  max-width: 1200px;     /* keeps it from stretching too wide */
+}
+
+.gridElements {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;   /* take full column width */
+  height: auto;  /* adjust to content */
+  min-height: 7rem; /* optional minimum */
+  border: teal solid 2px;
+  padding: 1rem;
+  border-radius: 20px;
+  transition: transform 0.3s ease-in-out;
+  color: white;   
+}
+
+.iconTextCombo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.skillIcon {
+  font-size: 2.5rem;  
+}
+
+.gridElements h2 {
+  font-size: 1.5rem;
+  color: #b1784f;
+  margin: 0;
+}
+
+.skillLevel{
+  max-height: 0;        /* start collapsed */
+  opacity: 0;           /* invisible */
+  overflow: hidden;     /* hide overflow */
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+
+
+.gridElements:hover .skillLevel {
+  max-height: 50px;        /* enough to show text */
+  opacity: 1;             
+}
+
+.gridElements:hover{
+  transform: translateY(-20px) ;
+  box-shadow: 0 0 25px teal;
+}
+
+.projectHr{
+  border: none;
+  height: 5px;
+  background: teal;
+  margin-top: 50px;
+  border-radius: 50px;
+  width: 100vw;
+}
+
+/* ------------------------------------- project cards ----------------------------- */
+.cardContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 40px;
+  margin: 150px 30px 75px 30px;
+}
+
+.projectCard{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width:600px;
+  height: 800px;
+  border-radius: 50px;
+  padding: 25px;
+  background: linear-gradient(135deg, #008080, #00cfcf);
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  transition: all ease-in-out 0.3s;
+}
+
+.projectCard:hover{
+  transform: translateY(-20px);
+  box-shadow: 0 0 30px rgba(0,128,128,.5);
+}
+
+.projectCard h1{
+  font-size: 2.5rem;
+}
+
+.projectCard h2 {
+  font-size: 1.7rem;
+}
+.about, .used{
+  margin-top: 10px;
+}
+.aboutTitle{
+  text-align: center;
+}
+
+
+
+.hobbiePicDome{
+  width: 590px;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.footer{
+  background-color: #353535;
+  color:#c0c0c0;
+}
+.footerContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap:1vh;
+  padding:7rem;
+  height: 100%;
+}
+
+.footerImgContainer img{
+  width:7rem;
+  height: auto;
+}
+
+.footerPageLinks{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap:2vh;
+  font-size: 2vh;
+  font-weight: 500;
+}
+
+.footerSocials{
+  display: flex;
+  gap:1rem;
+}
+
+.footerSocials svg {
+  width: 3vh;
+  height: auto;
+  transition: all 0.3s ease-in-out ;
+}
+
+.footerSocials svg:hover {
+  color:white;
+}
+
+.footerEmail,
+.footerPhone{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap:1vh;
+  font-size: 1.7vh;
+}
+
+.footerEmail svg,
+.footerPhone svg{
+  width: 2vh;
+  height: auto;
+}
+
+.copyRight{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .5vh;
+}
+.copyRightHr{
+width: 35vh;
+}
+
+
+
+
+
+
 
 
 .contactModalOverlay {
@@ -218,352 +635,6 @@ html,body {
 .submitBtn:hover{
   transform: scale(1.1);
 }
-
-
-/* ----------------------------------- Landing Area --------------------------------------- */
-.landingArea {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  
-}
-
-.leftSection,
-.middleSection,
-.rightSection {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-
-/* ------------------------------------- text next to circle pic ----------------------------- */
-.leftSection {
-  justify-content: flex-end;
-}
-
-.myText {
-  color: white;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.greetingWrapper{
-  display: flex;
-  align-items: center;
-  gap:2vw;
-}
-
-.greeting{
-  background-color: #444444;
-  padding: 0.3rem 0.5rem;
-  border-radius: 5px;
-  font-size: 1.2rem;
-}
-
-
-.line{
-  background-color:#b1784f;
-  height: 0.6rem;
-  border-radius: 5px;
-  flex-grow: .8;
-}
-
-.myText h1{
-  font-size: 3vw; 
-  margin: 0;
-}
-
-.myText p{
-  font-size: 1.5vw;
-  margin: 0.5rem 0;
-}
-
-.socials{
-  color:white;
-  font-size: 2rem;
-  margin-top: 1rem;
-}
-
-.socials p{
-  background-color: #444444;
-  width: fit-content;
-  padding: 5px;
-  border-radius: 5px;
-  font-size: 1.3rem;
-  margin-top: 20px;
-}
-
-.icons{
-  display: flex;
-  gap: .25rem;
-  margin-top: 0.5rem;
-}
-
-.icons svg {
-  width: 2.5vw;   /* adjust width */
-  height: 2.5vw;  /* adjust height */
-  color: #ffffff; /* optional: change color */
-}
-
-
-
-/* ------------------------------------- Circle Pic  ----------------------------- */
-.middleSection{
-  position: relative;
-}
-
-
-
-.mainPictureWrapper img{
-  width: 75vh;
-}
-
-.circleWrapper {
-  position: relative;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 850px;
-  width: 500px;
-}
-
-.circle {
-  position: absolute;
-  top: 195px; /* adjust to control vertical placement */
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  background-color: #008080;
-  z-index: 1;
-  
-}
-
-.myImg {
-  position: absolute;
-  top: 50px; /* same as .circle to align */
-  width: 545px;
-  height: 650px;
-  border-radius: 50%;
-  overflow: hidden; /* clips bottom */
-  z-index: 2;
-}
-
-.myImg img {
-  position: absolute;
-  top: -175px; /* head pops out */
-  left: 0;
-  width: 100%;
-}
-
-/* ------------------------------------- Lanyard Section ----------------------------- */
-
-
-
-/* ------------------------------------- About Me ----------------------------- */
-.aboutMeContainer{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  background:linear-gradient(135deg, #008080, #00cfcf) ;
-  
-  margin: 0 auto;
-  padding: 2rem;
-  border-radius: 25px;
-  height: 50vh;
-  
-  border: white solid 3px;
-  color: white;
-}
-
-.aboutMeText{
-  flex: 2;
-  color:white;
-  font-size:1.2vw;
-  line-height: 1.6; 
-  
-}
-
-.aboutMePictureContainer{
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  aspect-ratio: 1/1;
-  max-width: 600px;
-  width: 100%;
-
-  background:linear-gradient(135deg, #008080, #00cfcf) ;
-  border: white solid .5rem;
-  border-radius: 50%;
-  overflow: hidden;
-  
-}
-
-
-
-.aboutMeText p{
-  font-family:'Courier New', Courier, monospace;
-}
-
-
-
-.aboutMePicture img{
-  width: 100%;     
-  height: auto;
-  object-fit: cover;
-  
- 
-  
-}
-
-
-/* ------------------------------------- Skills Section----------------------------- */
-
-.skills{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin-top: 10rem;
-  text-align: center;
-}
-
-.skillsTitle{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap:1vw;
-  font-size: 3rem;
-  font-weight: 500;
-  margin-bottom: 2rem;
-}
-
-.skillsTitle span {
-  font-size: 3rem;
-}
-
-
-.skillGrid{
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 2rem;             /* uniform space between items */
-  width: 80%;
-  max-width: 1200px;     /* keeps it from stretching too wide */
-}
-
-.gridElements {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  width: 100%;   /* take full column width */
-  height: auto;  /* adjust to content */
-  min-height: 7rem; /* optional minimum */
-  border: teal solid 2px;
-  padding: 1rem;
-  border-radius: 20px;
-  transition: transform 0.3s ease-in-out;
-  color: white;   
-}
-
-.iconTextCombo {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  transition: all 0.3s ease-in-out;
-}
-
-.skillIcon {
-  font-size: 2.5rem;  
-}
-
-.gridElements h2 {
-  font-size: 1.5rem;
-  color: #b1784f;
-  margin: 0;
-}
-
-.skillLevel{
-  max-height: 0;        /* start collapsed */
-  opacity: 0;           /* invisible */
-  overflow: hidden;     /* hide overflow */
-  transition: max-height 0.3s ease, opacity 0.3s ease;
-}
-
-
-
-.gridElements:hover .skillLevel {
-  max-height: 50px;        /* enough to show text */
-  opacity: 1;             
-}
-
-.gridElements:hover{
-  transform: translateY(-20px) ;
-  box-shadow: 0 0 25px teal;
-}
-
-.hr{
-  border: none;
-  height: 5px;
-  background: teal;
-  margin: 50px 0;
-  border-radius: 50px;
-  width: 100vw;
-}
-
-/* ------------------------------------- project cards ----------------------------- */
-.cardContainer{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  gap: 40px;
-  margin: 150px 30px 75px 30px;
-}
-
-.projectCard{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width:600px;
-  height: 800px;
-  border-radius: 50px;
-  padding: 25px;
-  background: linear-gradient(135deg, #008080, #00cfcf);
-  border: 3px solid rgba(255, 255, 255, 0.2);
-  transition: all ease-in-out 0.3s;
-}
-
-.projectCard:hover{
-  transform: translateY(-20px);
-  box-shadow: 0 0 30px rgba(0,128,128,.5);
-}
-
-.about, .used{
-  margin-top: 10px;
-}
-
-.about h1, .used h1{
-  text-align: center;
-  font-size: 2rem;
-  
-}
-
-
-.hobbiePicDome{
-  width: 590px;
-  height: 100%;
-  border-radius: 10px;
-}
-
-
-
 
 
 
