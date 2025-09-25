@@ -14,7 +14,7 @@ html,body {
   width: 12px;
 }
 ::-webkit-scrollbar-track{
-  background: rgb(34, 34, 34);
+  background: #222222;
 }
 
 ::-webkit-scrollbar-thumb{
@@ -49,7 +49,7 @@ html,body {
 }
 
 .logo img{
-  width: 3.5rem;
+  width: 3vw;
 }
 
 .links{
@@ -80,17 +80,21 @@ html,body {
 .links a:hover{
   color:#00cfcf;
 }
+
 .links a:hover::after{
   width: 100%;
 }
 
 .contact{
-  justify-self: end;
-  transition: all 0.3s ease-in-out;
+  justify-self: flex-end;
 }
 
-.contact:hover{
-  transform: scale(1.1);
+.contactMeButton{
+  cursor:pointer;
+  transition: all 0.3s ease-in-out;
+}
+.contactMeButton:hover{
+  box-shadow: 0 0 10px rgb(0, 255, 255);
 }
 
 .contactMeButton{
@@ -165,25 +169,24 @@ html,body {
   margin: 0.5rem 0;
 }
 
-.socials{
+.careerLinks{
   color:white;
   font-size: 2rem;
   margin-top: 1rem;
 }
 
-.socials p{
+.careerLinks p{
   background-color: #444444;
   width: fit-content;
   padding: 5px;
   border-radius: 5px;
   font-size: 1.3rem;
-  margin-top: 20px;
+  margin: 1vh 0;
 }
 
 .icons{
   display: flex;
-  gap: .25rem;
-  margin-top: 0.5rem;
+  gap: .5rem;
 }
 
 .icons svg {
@@ -370,22 +373,35 @@ html,body {
 }
 
 /* ------------------------------------- project cards ----------------------------- */
+
+.projectContainer{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap:5vh;
+  
+}
+
+.projectTitle{
+  font-size: 2.5vh;
+}
 .cardContainer{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   gap: 40px;
-  margin: 150px 30px 75px 30px;
+  margin-bottom: 10vh;
 }
 
 .projectCard{
   display: flex;
   align-items: center;
   flex-direction: column;
-  width:600px;
-  height: 800px;
+  width:31vw;
+  height: 90vh;
   border-radius: 50px;
-  padding: 25px;
+  padding: 2vh;
   background: linear-gradient(135deg, #008080, #00cfcf);
   border: 3px solid rgba(255, 255, 255, 0.2);
   transition: all ease-in-out 0.3s;
@@ -404,7 +420,7 @@ html,body {
   font-size: 1.7rem;
 }
 .about, .used{
-  margin-top: 10px;
+  margin-top: 1vh;
 }
 .aboutTitle{
   text-align: center;
@@ -413,7 +429,7 @@ html,body {
 
 
 .hobbiePicDome{
-  width: 590px;
+  width: 30.5vw;
   height: 100%;
   border-radius: 10px;
 }
@@ -462,19 +478,16 @@ html,body {
   transform: scale(1.1);
 }
 
-.footerEmail,
-.footerPhone{
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  gap:1vh;
+.footerResume,
+.location{
   font-size: 1.7vh;
 }
 
-.footerEmail svg,
-.footerPhone svg{
-  width: 2vh;
-  height: auto;
+.footerResume a{
+  transition: all 0.3 ease-in-out;
+}
+.footerResume a:hover{
+  color:white;
 }
 
 .copyRight{
@@ -484,6 +497,7 @@ html,body {
   align-items: center;
   gap: .5vh;
 }
+
 .copyRightHr{
 width: 35vh;
 }
@@ -502,7 +516,7 @@ width: 35vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 100;
+  z-index: 2001;
   
 }
 
@@ -515,13 +529,13 @@ width: 35vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 600px;
-
+  width: 30vw;
+  
 }
 
 .contactModalBox h2{
   font-size: 3rem;
-  margin: 0px 0px 25px 0px;
+  margin-bottom: 25px;
   
 } 
 
@@ -576,9 +590,9 @@ width: 35vh;
 
 
 .inputGroup textarea{
-  max-width: 360px;
-  width: 360px;
-  height: 180px;
+  max-width: 100%;
+  width: 100%;
+  height: 15vh;
   color: white;
   background-color: transparent ;
   outline: none;
@@ -603,11 +617,10 @@ width: 35vh;
 
 
 .closeModalBtn{
-  font-size: 1.1rem;
-  padding: 5px 10px;
-  border-radius: 20px;
+  font-size: 2rem;
   border: none;
-  background-color: rgba(255, 0, 0, 0.747);
+  background-color: transparent;
+  color:rgba(255, 0, 0, 0.75);
   position: relative;
   left:52.5%;
   transition: all 0.3s ease-in-out;
@@ -639,6 +652,32 @@ width: 35vh;
 
 
 
+
+/* Ensure modal sits below fixed nav and fits on small screens */
+@media (max-width: 768px) {
+  .contactModalOverlay {
+    align-items: flex-start;
+    padding-top: 80px; /* approximate nav height */
+  }
+
+  .contactModalBox {
+    width: 90vw;
+    padding: 20px;
+  }
+
+  .inputGroup input {
+    width: 100%;
+  }
+
+  .inputGroup textarea {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .submitBtn {
+    width: 60vw;
+  }
+}
 
 @media (prefers-color-scheme: dark) {
   .main h1 {

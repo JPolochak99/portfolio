@@ -14,7 +14,7 @@ import 'aos/dist/aos.css';
 // 4️ Other libraries
 import AOS from 'aos';
 import { faInstagram, faCss3Alt, faSquareLinkedin, faHtml5, faSquareJs, faPhp, faPython, faGithub, faLinux, faReact } from '@fortawesome/free-brands-svg-icons';
-import { faDatabase, faEnvelope, faPhone} from '@fortawesome/free-solid-svg-icons';
+import { faDatabase, faFileLines, faCircleXmark} from '@fortawesome/free-solid-svg-icons';
 import { faFileExcel, faFilePowerpoint } from '@fortawesome/free-regular-svg-icons';
 
 // 5️⃣ Components
@@ -78,31 +78,32 @@ export default function Home() {
           <div className={styles.leftSection}>
            {/* ------------------------------------------------------------ Text Next to Center Circle Section ------------------------------------------------------------ */}
             <div className={styles.myText}>
-            <div data-aos="fade-right" data-aos-duration="2000" data-aos-delay="1500">
-              <div className={styles.greetingWrapper}>
-                <p><span className={styles.greeting}> Hello, my name is</span></p> <span className={styles.line}></span>
-              </div>
-
-              <h1>Jonathan Polochak</h1>
-              <p>Majoring in <span className={styles.teal}>Information Technology</span></p>
-              <TextType 
-                text={["I'm a student at Coastal Carolina University", "I am in my junior year."]}
-                typingSpeed={75}
-                pauseDuration={2500}
-                showCursor={true}
-                cursorCharacter="|"
-              />
-              <div className={styles.socials}>
-                <p>My Socials</p>
-                <div className={styles.icons}>
-                  <a href="https://www.instagram.com/jonathanpolochak/"><FontAwesomeIcon icon={faInstagram} /></a>
-                  <a  href="https://www.linkedin.com/in/jonathan-polochak-a84a6b386/"><FontAwesomeIcon icon={faSquareLinkedin} /></a>
-                  <a  href="https://github.com/JPolochak99"><FontAwesomeIcon icon={faGithub} /></a>
+              <div data-aos="fade-right" data-aos-duration="2000" data-aos-delay="1500">
+                <div className={styles.greetingWrapper}>
+                  <p><span className={styles.greeting}> Hello, my name is</span></p> <span className={styles.line}></span>
                 </div>
-              </div> 
+                <div className={styles.personalInfo}>
+                  <h1>Jonathan Polochak</h1>
+                  <p>Majoring in <span className={styles.teal}>Information Technology</span></p>
+                  <TextType 
+                    text={["I'm a student at Coastal Carolina University", "I am in my junior year."]}
+                    typingSpeed={75}
+                    pauseDuration={2500}
+                    showCursor={true}
+                    cursorCharacter="|"
+                  />
+                </div>
+                <div className={styles.careerLinks}>
+                  <p>Career Links</p>
+                  <div className={styles.icons}>
+                    <a href="assets/Resume.pdf" target="_blank" rel="noopener noreferrer" title="Resume"><FontAwesomeIcon icon={faFileLines} /></a>
+                    <a  href="https://www.linkedin.com/in/jonathan-polochak-a84a6b386/" title="Linked In"><FontAwesomeIcon icon={faSquareLinkedin} /></a>
+                    <a  href="https://github.com/JPolochak99" title="GitHub"><FontAwesomeIcon icon={faGithub} /></a>
+                  </div>
+                </div> 
+              </div>
             </div>
           </div>
-        </div>
 
 
           {/* ------------------------------------------------------------ Center Circle & Picture Section ------------------------------------------------------------ */}  
@@ -127,7 +128,7 @@ export default function Home() {
           <div className={styles.aboutMeContainer} >
             <div className={styles.aboutMeText} data-aos="fade-right"> 
               <h1>About Me</h1>
-              <p>My name is Jonathan Polochak, I am studying computer science at the Coastal Carolina University. My short term goal is to find a summer 2026 intership in the Computer Science field. My long term goal is to become a front end developer. I enjoy combining creativity with problem-solving, and front-end development allows me to bring ideas to life visually while also focusing on user experience. In my free time, I work on personal projects such as building responsive websites and designing digital graphics to sharpen my skills. I am excited to continue learning and building real-world projects that will prepare me for my future career.</p>
+              <p>My name is Jonathan Polochak, I am studying computer science at Coastal Carolina University. My short term goal is to find a summer 2026 intership in the Computer Science field. My long term goal is to become a front end developer. I enjoy combining creativity with problem-solving, and front-end development allows me to bring ideas to life visually while also focusing on user experience. In my free time, I work on personal projects such as building responsive websites and designing digital graphics to sharpen my skills. I am excited to continue learning and building real-world projects that will prepare me for my future career.</p>
             </div>
             <div className={styles.aboutMePictureContainer}>
               <div className={styles.aboutMePicture}>
@@ -280,64 +281,76 @@ export default function Home() {
         
         </section>
     </div>
-    <hr className={styles.projectHr}></hr>
+    
 
         {/* ------------------------------------------------------------ Project Section ------------------------------------------------------------ */}
         <section id="projects">
-          <div className={styles.cardContainer}>
-            <div className={styles.projectCard}>
-                <h1>Box Battles</h1>
+          <div className={styles.projectContainer}>
+            <hr className={styles.projectHr}></hr>
 
-                <Carousel
-                  images={[
-                    "/assets/boxBattleHome.png",
-                    "/assets/boxBattleDashboard.png",
-                    "/assets/boxBattleCreateGame.png"
-                  ]}
-                />
-                
-                <div className={styles.about}>
-                  <div className={styles.aboutTitle}>
-                    <h2>About</h2>
-                  </div>
-                  <p>Box Battles is a full-stack web application that allows users to create and participate in Super Bowl styled games for both the NFL and NBA. The platform features a real-time game management system, including dynamic team selection, automated score tracking, and live box score updates via the SportsData.io API for NFL games. Users can join or create a game, receive notifications via SMS integration and in-app notifications, and interact with a clean and responsive UI.</p>
-                </div>
-
-                <div className={styles.used}>
-                  <h2>Skills Used</h2>
-                  <ul>
-                    <li>HTML & CSS</li>
-                    <li>PHP</li>
-                    <li>JavaScript</li>
-                    <li>API Intergration</li>
-                    <li>Authentication & Sessions</li>
-                    <li>Database Design</li>
-                    <li>SQL</li>
-                  </ul>
-                </div>
+            <div className={styles.projectTitle}>
+              <h1>Projects</h1>
             </div>
+          
+            <div className={styles.cardContainer}>
+              <div className={styles.projectCard}>
+                  <h1>Box Battles</h1>
 
-            <div className={styles.projectCard}>
-                <h1>Graphics</h1>
-                  <div className={styles.hobbiePicDome}>
-                    <div style={{ width: '100%', height: '100%' }}>
-                      <DomeGallery />
+                  <Carousel
+                    images={[
+                      "/assets/boxBattleHome.png",
+                      "/assets/boxBattleDashboard.png",
+                      "/assets/boxBattleCreateGame.png"
+                    ]}
+                  />
+                  
+                    <div className={styles.about}>
+
+                      <div className={styles.aboutTitle}>
+                        <h2>About</h2>
+                      </div>
+
+                      <p>Box Battles is a full-stack web application that allows users to create and participate in Super Bowl styled games for both the NFL and NBA. The platform features a real-time game management system, including dynamic team selection, automated score tracking, and live box score updates via the SportsData.io API for NFL games. Users can join or create a game, receive notifications via SMS integration and in-app notifications, and interact with a clean and responsive UI.</p>
+
                     </div>
-                  </div>
+
+                    <div className={styles.used}>
+                      <h2>Skills Used</h2>
+                      <ul>
+                        <li>HTML & CSS</li>
+                        <li>PHP</li>
+                        <li>JavaScript</li>
+                        <li>API Intergration</li>
+                        <li>Authentication & Sessions</li>
+                        <li>Database Design</li>
+                        <li>SQL</li>
+                      </ul>
+                    </div>
+
+              </div>
+
+              <div className={styles.projectCard}>
+                  <h1>Graphics</h1>
+                    <div className={styles.hobbiePicDome}>
+                      <div style={{ width: '100%', height: '100%' }}>
+                        <DomeGallery />
+                      </div>
+                    </div>
+              </div>
+
+              <div className={styles.projectCard}>
+                  <h3>Box Battles</h3>
+
+                  <Carousel
+                    images={[
+                      "/assets/boxBattleHome.png",
+                      "/assets/boxBattleDashboard.png",
+                      "/assets/boxBattleCreateGame.png"
+                    ]}
+                  />
+              </div>
+
             </div>
-
-            <div className={styles.projectCard}>
-                <h3>Box Battles</h3>
-
-                <Carousel
-                  images={[
-                    "/assets/boxBattleHome.png",
-                    "/assets/boxBattleDashboard.png",
-                    "/assets/boxBattleCreateGame.png"
-                  ]}
-                />
-            </div>
-
           </div>
         </section>
 
@@ -367,12 +380,12 @@ export default function Home() {
                   <a  href="https://github.com/JPolochak99"><FontAwesomeIcon icon={faGithub} /></a>
                   </div>
 
-                  <div className={styles.footerEmail}>
+                  <div className={styles.footerResume}>
                     
-                    <p>View my Resume Here</p>
+                    <p><a href="assets/Resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a> | <a href="assets/Resume.pdf" download="Jonathan_Polochak_Resume.pdf">Download Resume</a></p>
                   </div>
 
-                  <div className={styles.footerPhone}>
+                  <div className={styles.location}>
                     
                     <p>Long Island NY | Conway South Carolina</p>
                   </div>
@@ -408,7 +421,7 @@ export default function Home() {
               className={styles.contactModalBox}
               onClick={(e) => e.stopPropagation()}
             >
-              <button className={styles.closeModalBtn} onClick={() => setIsContactOpen(false)}>X</button>
+              <button className={styles.closeModalBtn} onClick={() => setIsContactOpen(false)}><FontAwesomeIcon icon={faCircleXmark} /></button>
               <h2>Contact Me</h2>
               <form 
                 onSubmit={async (e) => {
