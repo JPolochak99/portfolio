@@ -459,6 +459,7 @@ html,body {
 
 .footerSocials svg:hover {
   color:white;
+  transform: scale(1.1);
 }
 
 .footerEmail,

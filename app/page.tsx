@@ -362,18 +362,19 @@ export default function Home() {
                   </div>
 
                   <div className={styles.footerSocials}>
-                    <FontAwesomeIcon icon={faInstagram} />
-                    <FontAwesomeIcon icon={faSquareLinkedin} />
+                  <a href="https://www.instagram.com/jonathanpolochak/"><FontAwesomeIcon icon={faInstagram} /></a>
+                  <a  href="https://www.linkedin.com/in/jonathan-polochak-a84a6b386/"><FontAwesomeIcon icon={faSquareLinkedin} /></a>
+                  <a  href="https://github.com/JPolochak99"><FontAwesomeIcon icon={faGithub} /></a>
                   </div>
 
                   <div className={styles.footerEmail}>
-                    <FontAwesomeIcon icon={faEnvelope} />
-                    <p>polochak</p>
+                    
+                    <p>View my Resume Here</p>
                   </div>
 
                   <div className={styles.footerPhone}>
-                    <FontAwesomeIcon icon={faPhone} />
-                    <p>631 951 8003</p>
+                    
+                    <p>Long Island NY | Conway South Carolina</p>
                   </div>
 
                   <div className={styles.copyRight}>
