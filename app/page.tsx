@@ -96,7 +96,7 @@ export default function Home() {
                 <div className={styles.careerLinks}>
                   <p>Career Links</p>
                   <div className={styles.icons}>
-                    <a href="assets/Resume.pdf" target="_blank" rel="noopener noreferrer" title="Resume"><FontAwesomeIcon icon={faFileLines} /></a>
+                    <a href="https://drive.google.com/file/d/1lPKuVufri1imqLWnIKvvK95vPjiv3jQT/view?usp=drive_link" target="_blank" rel="noopener noreferrer" title="Resume"><FontAwesomeIcon icon={faFileLines} /></a>
                     <a  href="https://www.linkedin.com/in/jonathan-polochak-a84a6b386/" title="Linked In"><FontAwesomeIcon icon={faSquareLinkedin} /></a>
                     <a  href="https://github.com/JPolochak99" title="GitHub"><FontAwesomeIcon icon={faGithub} /></a>
                   </div>
@@ -375,14 +375,13 @@ export default function Home() {
                   </div>
 
                   <div className={styles.footerSocials}>
-                  <a href="https://www.instagram.com/jonathanpolochak/"><FontAwesomeIcon icon={faInstagram} /></a>
                   <a  href="https://www.linkedin.com/in/jonathan-polochak-a84a6b386/"><FontAwesomeIcon icon={faSquareLinkedin} /></a>
                   <a  href="https://github.com/JPolochak99"><FontAwesomeIcon icon={faGithub} /></a>
                   </div>
 
                   <div className={styles.footerResume}>
                     
-                    <p><a href="assets/Resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a> | <a href="assets/Resume.pdf" download="Jonathan_Polochak_Resume.pdf">Download Resume</a></p>
+                    <p><a href="https://drive.google.com/file/d/1lPKuVufri1imqLWnIKvvK95vPjiv3jQT/view?usp=drive_link" target="_blank" rel="noopener noreferrer">View Resume</a> | <a href="assets/Resume.pdf" download="Jonathan_Polochak_Resume.pdf">Download Resume</a></p>
                   </div>
 
                   <div className={styles.location}>
