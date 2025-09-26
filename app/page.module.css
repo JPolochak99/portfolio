@@ -1,6 +1,7 @@
 html,body {
   overflow-x: hidden;
   scroll-behavior: smooth;
+  scroll-padding-top: 10vh;
   -webkit-overflow-scrolling: touch;
   min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -218,6 +219,7 @@ html,body {
 
 
 /* ------------------------------------- About Me ----------------------------- */
+
 .aboutMeContainer{
   display: flex;
   justify-content: space-between;
@@ -653,29 +655,342 @@ width: 35vh;
 
 
 
-/* Ensure modal sits below fixed nav and fits on small screens */
+/* Mobile Styles - iPhone and small screens */
 @media (max-width: 768px) {
+  
+  /* Navigation Bar */
+  .nav {
+    width: 100vw;
+    padding: 0.5rem;
+    grid-template-columns: auto 1fr auto;
+    gap: 1rem;
+  }
+
+  .logo img {
+    width: 8vw;
+    min-width: 30px;
+    height: auto;
+  }
+ 
+  .links {
+    font-size: 0.9rem;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contactMeButton {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+
+  /* Landing Area */
+  .landingArea {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 0.5rem;
+    margin-top: 0;
+  }
+
+  .leftSection,
+  .middleSection,
+  .rightSection {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .leftSection {
+    justify-content: center;
+    padding: 0.5rem;
+  }
+
+  .middleSection {
+    flex:2;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+
+  .rightSection {
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+
+  /* Text Section */
+  .myText {
+    text-align: left;
+    justify-content: flex-end;
+  }
+
+  .myText h1 {
+    font-size: 1.8rem;
+  }
+
+  .myText p {
+    font-size: 1rem;
+  }
+
+  .greeting {
+    font-size: 0.9rem;
+  }
+
+  .careerLinks {
+    font-size: 1.2rem;
+  }
+
+  .icons svg {
+    width: 6vw;
+    height: 6vw;
+    min-width: 25px;
+    min-height: 25px;
+  }
+
+  /* Main Picture */
+  .mainPictureWrapper img {
+    width: 80px !important; 
+    height: auto;
+    max-width: none;
+  }
+
+  /* About Me Section */
+  .aboutMeContainer {
+    flex-direction: column;
+    height: auto;
+    padding: 1.5rem;
+    margin: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .aboutMeText {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .aboutMePictureContainer {
+    max-width: 250px;
+    width: 60vw;
+  }
+
+  /* Skills Section */
+  .skills {
+    margin-top: 5rem;
+    padding: 0 1rem;
+  }
+
+  .skillsTitle {
+    font-size: 2rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .skillGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 95%;
+  }
+
+  .gridElements {
+    min-height: 6rem;
+    padding: 0.8rem;
+  }
+
+  .gridElements h2 {
+    font-size: 1.2rem;
+  }
+
+  .skillIcon {
+    font-size: 2rem;
+  }
+
+  /* Projects Section */
+  .projectContainer {
+    padding: 0 1rem;
+  }
+
+  .projectTitle h1 {
+    font-size: 2rem;
+  }
+
+  .cardContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .projectCard {
+    width: 90vw;
+    max-width: 400px;
+    height: auto;
+    min-height: 70vh;
+    padding: 1.5rem;
+  }
+
+  .projectCard h1 {
+    font-size: 2rem;
+  }
+
+  .projectCard h2 {
+    font-size: 1.4rem;
+  }
+
+  .hobbiePicDome {
+    width: 100%;
+    height: 40vh;
+  }
+
+  /* Footer */
+  .footerContainer {
+    padding: 3rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .footerImgContainer img {
+    width: 5rem;
+  }
+
+  .footerPageLinks {
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .footerSocials svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .footerResume,
+  .location {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  /* Contact Modal */
   .contactModalOverlay {
     align-items: flex-start;
-    padding-top: 80px; /* approximate nav height */
+    padding-top: 60px;
   }
 
   .contactModalBox {
     width: 90vw;
-    padding: 20px;
+    max-width: 400px;
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .contactModalBox h2 {
+    font-size: 2rem;
+  }
+
+  .inputGroup {
+    margin: 1rem 0;
   }
 
   .inputGroup input {
     width: 100%;
+    height: 50px;
+    font-size: 1rem;
   }
 
   .inputGroup textarea {
-    max-width: 100%;
     width: 100%;
+    height: 12vh;
+    font-size: 1.2rem;
+  }
+
+  .inputGroup label {
+    font-size: 1rem;
+  }
+
+  .closeModalBtn {
+    left: 45%;
+    font-size: 1.5rem;
   }
 
   .submitBtn {
-    width: 60vw;
+    width: 80vw;
+    max-width: 200px;
+    font-size: 1rem;
+  }
+}
+
+/* Extra small screens (iPhone SE, etc.) */
+@media (max-width: 480px) {
+  .nav {
+    padding: 0.3rem;
+  }
+
+  .logo img {
+    width: 10vw;
+    min-width: 25px;
+  }
+
+  .links {
+    font-size: 0.8rem;
+    gap: 8px;
+  }
+
+  .contactMeButton {
+    font-size: 0.7rem;
+    padding: 6px 10px;
+  }
+
+  .myText h1 {
+    font-size: 1.5rem;
+  }
+
+  .myText p {
+    font-size: 0.9rem;
+  }
+
+  .mainPictureWrapper img {
+    width: 75vw !important;
+    max-width: none !important;
+  }
+
+  .aboutMeContainer {
+    margin: 1rem 0.5rem;
+    padding: 1rem;
+  }
+
+  .aboutMeText {
+    font-size: 0.9rem;
+  }
+
+  .skillsTitle {
+    font-size: 1.5rem;
+  }
+
+  .skillGrid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .projectCard {
+    width: 95vw;
+    padding: 1rem;
+  }
+
+  .projectCard h1 {
+    font-size: 1.5rem;
+  }
+
+  .footerContainer {
+    padding: 2rem 0.5rem;
+  }
+
+  .contactModalBox {
+    width: 95vw;
+    padding: 1rem;
+  }
+
+  .contactModalBox h2 {
+    font-size: 1.5rem;
   }
 }
 

@@ -13,3 +13,10 @@
   .text-type__cursor--hidden {
     display: none;
   }
+
+
+  @media (max-width: 480px) {
+    .text-type{
+      font-size: 1.1rem;
+    }
+  }
