@@ -111,7 +111,7 @@ export default function Home() {
         <div className={styles.mainPictureWrapper}>
           
           
-          <img src="/assets/blackTieCircle2.png" alt="Me" />
+          <img src="/assets/blackTieCirclePic.svg" alt="Me" />
         </div>
         
         </div>
@@ -132,7 +132,7 @@ export default function Home() {
             </div>
             <div className={styles.aboutMePictureContainer}>
               <div className={styles.aboutMePicture}>
-                <img src="../../assets/blueTie.png"></img>
+                <img src="../../assets/blueTie.svg"></img>
                 </div>
             </div>
           </div>
