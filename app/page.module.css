@@ -263,8 +263,8 @@ html,body {
 
 
 
-.aboutMeText p{
-  font-family:'Courier New', Courier, monospace;
+.aboutMeText p {
+  font-family: 'Fira Code', monospace;
 }
 
 
@@ -414,6 +414,10 @@ html,body {
   box-shadow: 0 0 30px rgba(0,128,128,.5);
 }
 
+.projectCard a{
+  font-size: 1.2em;
+}
+
 .projectCard h1{
   font-size: 2.5rem;
 }
@@ -432,8 +436,10 @@ html,body {
 
 .hobbiePicDome{
   width: 30.5vw;
-  height: 100%;
+  height: 75%;
   border-radius: 10px;
+  border-top: white 2px solid;
+  border-bottom: white 2px solid;
 }
 
 .footer{

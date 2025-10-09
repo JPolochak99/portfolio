@@ -13,9 +13,9 @@ import 'aos/dist/aos.css';
 
 // 4️ Other libraries
 import AOS from 'aos';
-import { faInstagram, faCss3Alt, faSquareLinkedin, faHtml5, faSquareJs, faPhp, faPython, faGithub, faLinux, faReact } from '@fortawesome/free-brands-svg-icons';
-import { faDatabase, faFileLines, faCircleXmark} from '@fortawesome/free-solid-svg-icons';
-import { faFileExcel, faFilePowerpoint } from '@fortawesome/free-regular-svg-icons';
+import { faCss3Alt, faSquareLinkedin, faHtml5, faSquareJs, faPhp, faPython, faGithub, faLinux, faReact, faNode, faGitAlt, faUbuntu, faWindows} from '@fortawesome/free-brands-svg-icons';
+import { faDatabase, faFileLines, faCircleXmark, faPenNib, faBolt, faFire} from '@fortawesome/free-solid-svg-icons';
+import { faFileExcel, faFilePowerpoint} from '@fortawesome/free-regular-svg-icons';
 
 // 5️⃣ Components
 import Lanyard from "../components/Lanyard";
@@ -96,7 +96,7 @@ export default function Home() {
                 <div className={styles.careerLinks}>
                   <p>Career Links</p>
                   <div className={styles.icons}>
-                    <a href="https://drive.google.com/file/d/1lPKuVufri1imqLWnIKvvK95vPjiv3jQT/view?usp=drive_link" target="_blank" rel="noopener noreferrer" title="Resume"><FontAwesomeIcon icon={faFileLines} /></a>
+                    <a href="https://drive.google.com/file/d/1j-Q7b3gSm3zAnikNPqwP0odBo7827JnI/view?usp=sharing" target="_blank" rel="noopener noreferrer" title="Resume"><FontAwesomeIcon icon={faFileLines} /></a>
                     <a  href="https://www.linkedin.com/in/jonathan-polochak-a84a6b386/" title="Linked In"><FontAwesomeIcon icon={faSquareLinkedin} /></a>
                     <a  href="https://github.com/JPolochak99" title="GitHub"><FontAwesomeIcon icon={faGithub} /></a>
                   </div>
@@ -149,7 +149,7 @@ export default function Home() {
             <p>Technical</p>
             
             <TextType 
-              text={["Languages", "Softwares", "Frameworks"]}
+              text={["Languages", "Frameworks", "Resources"]}
               typingSpeed={75}
               pauseDuration={2500}
               showCursor={true}
@@ -158,6 +158,8 @@ export default function Home() {
           </div>  
 
           <div className={styles.skillGrid}>
+
+            {/* ------------------------------------------------------------ Start of first row ------------------------------------------------------------ */} 
             <div className={styles.gridElements}>
               <div className={styles.iconTextCombo}>
                 <FontAwesomeIcon icon={faHtml5} className={styles.skillIcon} />
@@ -197,7 +199,7 @@ export default function Home() {
                 <p>Intermediate</p>
               </div>
             </div>
-            
+
             <div className={styles.gridElements}>
               <div className={styles.iconTextCombo}>
                 <FontAwesomeIcon icon={faDatabase} className={styles.skillIcon}/>
@@ -207,6 +209,7 @@ export default function Home() {
                 <p>Intermediate</p>
               </div>
             </div>
+
 
             <div className={styles.gridElements}>
               <div className={styles.iconTextCombo}>
@@ -218,27 +221,9 @@ export default function Home() {
               </div>
             </div>
 
-            <div className={styles.gridElements}>
-              <div className={styles.iconTextCombo}>
-                <FontAwesomeIcon icon={faGithub} className={styles.skillIcon}/>
-                <h2>GitHub</h2>
-              </div>
-              <div className={styles.skillLevel}>
-                <p>Beginnger</p>
-              </div>
-            </div>
+ {/* ------------------------------------------------------------ start of second row ------------------------------------------------------------ */}
 
             <div className={styles.gridElements}>
-                <div className={styles.iconTextCombo}>
-                  <FontAwesomeIcon icon={faLinux} className={styles.skillIcon} />
-                  <h2>Linux</h2>
-                </div>
-                <div className={styles.skillLevel}>
-                  <p>Intermediate</p>
-                </div>
-            </div>
-
-              <div className={styles.gridElements}>
                 <div className={styles.iconTextCombo}>
                   <FontAwesomeIcon icon={faReact} className={styles.skillIcon} />
                   <h2>React</h2>
@@ -250,8 +235,61 @@ export default function Home() {
 
               <div className={styles.gridElements}>
                 <div className={styles.iconTextCombo}>
-                  <FontAwesomeIcon icon={faFileExcel} className={styles.skillIcon}/>
-                  <h2>Excel</h2>
+                  <FontAwesomeIcon icon={faNode} className={styles.skillIcon}  />
+                  <h2>Node JS</h2>
+                </div>
+                <div className={styles.skillLevel}>
+                  <p>Beginner</p>
+                </div>
+              </div>
+              
+              <div className={styles.gridElements}>
+                <div className={styles.iconTextCombo}>
+                  <FontAwesomeIcon icon={faBolt} className={styles.skillIcon}  />
+                  <h2>Supabase</h2>
+                </div>
+                <div className={styles.skillLevel}>
+                  <p>Beginner</p>
+                </div>
+              </div>
+
+              <div className={styles.gridElements}>
+                <div className={styles.iconTextCombo}>
+                  <FontAwesomeIcon icon={faFire} className={styles.skillIcon}  />
+                  <h2>Firebase</h2>
+                </div>
+                <div className={styles.skillLevel}>
+                  <p>Beginner</p>
+                </div>
+              </div>
+              <div className={styles.gridElements}>
+              <div className={styles.iconTextCombo}>
+                <FontAwesomeIcon icon={faGithub} className={styles.skillIcon}/>
+                <h2>GitHub</h2>
+              </div>
+              <div className={styles.skillLevel}>
+                <p>Beginnger</p>
+              </div>
+            </div>
+
+            <div className={styles.gridElements}>
+                <div className={styles.iconTextCombo}>
+                  <FontAwesomeIcon icon={faGitAlt} className={styles.skillIcon}  />
+                  <h2>Git</h2>
+                </div>
+                <div className={styles.skillLevel}>
+                  <p>Beginner</p>
+                </div>
+              </div>
+
+              
+
+ {/* ------------------------------------------------------------ start of 3rd row ------------------------------------------------------------ */}
+
+ <div className={styles.gridElements}>
+                <div className={styles.iconTextCombo}>
+                  <FontAwesomeIcon icon={faWindows} className={styles.skillIcon}  />
+                  <h2>Windows</h2>
                 </div>
                 <div className={styles.skillLevel}>
                   <p>Advanced</p>
@@ -259,6 +297,36 @@ export default function Home() {
               </div>
 
               <div className={styles.gridElements}>
+                <div className={styles.iconTextCombo}>
+                  <FontAwesomeIcon icon={faLinux} className={styles.skillIcon} />
+                  <h2>Linux</h2>
+                </div>
+                <div className={styles.skillLevel}>
+                  <p>Intermediate</p>
+                </div>
+            </div>
+
+            <div className={styles.gridElements}>
+                <div className={styles.iconTextCombo}>
+                  <FontAwesomeIcon icon={faUbuntu} className={styles.skillIcon}  />
+                  <h2>Ubuntu</h2>
+                </div>
+                <div className={styles.skillLevel}>
+                  <p>Beginner</p>
+                </div>
+              </div>
+
+            <div className={styles.gridElements}>
+                <div className={styles.iconTextCombo}>
+                  <FontAwesomeIcon icon={faFileExcel} className={styles.skillIcon}/>
+                  <h2>Excel</h2>
+                </div>
+                <div className={styles.skillLevel}>
+                  <p>Advanced</p>
+                </div>
+            </div>
+
+            <div className={styles.gridElements}>
                 <div className={styles.iconTextCombo}>
                   <FontAwesomeIcon icon={faFilePowerpoint} className={styles.skillIcon} />
                   <h2>Powerpoint</h2>
@@ -266,16 +334,18 @@ export default function Home() {
                 <div className={styles.skillLevel}>
                   <p>Advanced</p>
                 </div>
-              </div>
+            </div>
 
-              <div className={styles.gridElements}>
+            <div className={styles.gridElements}>
                 <div className={styles.iconTextCombo}>
+                  <FontAwesomeIcon icon={faPenNib} className={styles.skillIcon}  />
                   <h2>Photoshop</h2>
                 </div>
                 <div className={styles.skillLevel}>
                   <p>Advanced</p>
                 </div>
-              </div>
+            </div>
+              
           </div>
                
         
@@ -295,7 +365,7 @@ export default function Home() {
             <div className={styles.cardContainer}>
               <div className={styles.projectCard}>
                   <h1>Box Battles</h1>
-
+                  <a href="https://boxbattles.net/">Go to Site</a>
                   <Carousel
                     images={[
                       "/assets/boxBattleHome.png",
@@ -310,7 +380,7 @@ export default function Home() {
                         <h2>About</h2>
                       </div>
 
-                      <p>Box Battles is a full-stack web application that allows users to create and participate in Super Bowl styled games for both the NFL and NBA. The platform features a real-time game management system, including dynamic team selection, automated score tracking, and live box score updates via the SportsData.io API for NFL games. Users can join or create a game, receive notifications via SMS integration and in-app notifications, and interact with a clean and responsive UI.</p>
+                      <p>Box Battles is a full-stack web application that allows users to create and participate in Super Bowl styled games for the NFL. The platform features a real-time game management system, including dynamic team selection, automated score tracking, and live box score updates from a software I designed to scrape the ESPN site. Users can join or create a game, receive notifications via SMS integration and in-app notifications, and interact with a clean and responsive UI.</p>
 
                     </div>
 
@@ -336,18 +406,50 @@ export default function Home() {
                         <DomeGallery />
                       </div>
                     </div>
+                    <div className={styles.about}>
+
+                      <div className={styles.aboutTitle}>
+                        <h2>About</h2>
+                      </div>
+
+                      <p>These graphics were made using Photoshop. Graphic design has always been a passion of mine and creating sports pieces like these are a way to sharpen my design skills while supporting my school.</p>
+
+                    </div>
               </div>
 
               <div className={styles.projectCard}>
-                  <h3>Box Battles</h3>
-
+                  <h1>Wedding Game</h1>
+                  <a href="https://betonmarino.netlify.app">Go to Site</a>
                   <Carousel
                     images={[
-                      "/assets/boxBattleHome.png",
-                      "/assets/boxBattleDashboard.png",
-                      "/assets/boxBattleCreateGame.png"
+                      "/assets/marino1.png",
+                      "/assets/marino2.png",
+                      "/assets/marino3.png"
                     ]}
                   />
+                  
+                    <div className={styles.about}>
+
+                      <div className={styles.aboutTitle}>
+                        <h2>About</h2>
+                      </div>
+
+                      <p>I made this site using react and nodeJS for my couisns wedding, it has users make predictions about the ceremoney. Some choices have higher point values than others due to the probability of the outcome. Users submit their responces, which are then stored by prisma in a database. A cookie is used to prevent users from submitting mutiple response but creating a simple site that does not require authentication. An admin can then enter the correct answers after the ceremony and the site will automaticall generate a leaderboard, and provide a personal breakdown of each questiom.</p>
+
+                    </div>
+
+                    <div className={styles.used}>
+                      <h2>Skills Used</h2>
+                      <ul>
+                        <li>HTML & CSS</li>
+                        <li>JavaScript</li>
+                        <li>Node JS</li>
+                        <li>Application of Cookues</li>
+                        <li>Database Design</li>
+                        <li>Prisma</li>
+                      </ul>
+                    </div>
+
               </div>
 
             </div>
@@ -381,7 +483,7 @@ export default function Home() {
 
                   <div className={styles.footerResume}>
                     
-                    <p><a href="https://drive.google.com/file/d/1lPKuVufri1imqLWnIKvvK95vPjiv3jQT/view?usp=drive_link" target="_blank" rel="noopener noreferrer">View Resume</a> | <a href="assets/Resume.pdf" download="Jonathan_Polochak_Resume.pdf">Download Resume</a></p>
+                    <p><a href="https://drive.google.com/file/d/1j-Q7b3gSm3zAnikNPqwP0odBo7827JnI/view?usp=sharing" target="_blank" rel="noopener noreferrer">View Resume</a> | <a href="https://drive.google.com/uc?export=download&id=1j-Q7b3gSm3zAnikNPqwP0odBo7827JnI" download>Download Resume</a></p>
                   </div>
 
                   <div className={styles.location}>
